@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento Vanguardista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #007367;
+            transition: top 0.3s;
+        }
+        body {
+            padding-top: 60px;
+            background-color: #F0E3CE;
+            color: #F0E3CE;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: #F0E3CE;
+        }
+        .btn-primary {
+            background-color: #F0E3CE;
+            color: #211E16;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #80A0D4;
+            color: white;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .slider-container {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slider-item {
+            min-width: 300px;
+            margin-right: 20px;
+        }
+        .form-input {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-4 shadow-lg sticky-nav">
+        <div class="container mx-auto flex justify-between items-center flex-col md:flex-row">
+            <h1 class="text-3xl font-bold">Movimiento Vanguardista</h1>
+            <nav>
+                <ul class="flex space-x-4 md:space-x-6">
+                    <li><a href="#inicio" class="hover:text-gray-300">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-gray-300">Sobre Nosotros</a></li>
+                    <li><a href="#baloncesto" class="hover:text-gray-300">Equipo de Baloncesto</a></li>
+                    <li><a href="#ropa" class="hover:text-gray-300">Colección de Ropa</a></li>
+                    <li><a href="#psicologia" class="hover:text-gray-300">Red Psicológica</a></li>
+                    <li><a href="#contacto" class="hover:text-gray-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="inicio" class="h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?city,night');">
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg">
+            <h2 class="text-4xl font-bold">Bienvenid@ al Movimiento Vanguardista</h2>
+            <p class="mt-4 text-lg">Un espacio donde el deporte, la moda y el bienestar se unen.</p>
+            <button class="btn-primary mt-4">Descubre más</button>
+        </div>
+    </section>
+    
+    <section id="nosotros" class="p-10 text-center">
+        <h2 class="text-3xl font-bold">Sobre Nosotros</h2>
+        <p class="mt-4">.</p>
+    </section>
+    
+    <section id="baloncesto" class="p-10 bg-[#80A0D4] text-center text-[#211E16]">
+        <h2 class="text-3xl font-bold">Equipo de Baloncesto</h2>
+        <p class="mt-4">...</p>
+    </section>
+    
+    <section id="ropa" class="p-10 text-center">
+        <h2 class="text-3xl font-bold">Colección de Ropa</h2>
+        <div class="slider-container mt-4">
+            <div class="slider">
+                <div class="slider-item card">
+                    <img src="https://via.placeholder.com/300" alt="Ropa 1">
+                    <h3 class="mt-4">Camiseta exclusiva</h3>
+                    <p>Descripción de la prenda.</p>
+                </div>
+                <div class="slider-item card">
+                    <img src="https://via.placeholder.com/300" alt="Ropa 2">
+                    <h3 class="mt-4">Pantalón moderno</h3>
+                    <p>Descripción de la prenda.</p>
+                </div>
+                <div class="slider-item card">
+                    <img src="https://via.placeholder.com/300" alt="Ropa 3">
+                    <h3 class="mt-4">Sudadera elegante</h3>
+                    <p>Descripción de la prenda.</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn-primary mt-4" onclick="moveSlider()">Ver más</button>
+    </section>
+    
+    <section id="psicologia" class="p-10 bg-[#E55982] text-center text-[#F0E3CE]">
+        <h2 class="text-3xl font-bold">Red Psicológica</h2>
+        <p class="mt-4">...</p>
+    </section>
+    
+    <section id="contacto" class="p-10 text-center">
+        <h2 class="text-3xl font-bold">Contacto</h2>
+        <form id="contact-form" class="mt-4">
+            <input type="text" class="form-input" placeholder="Tu nombre" required>
+            <input type="email" class="form-input" placeholder="Tu correo electrónico" required>
+            <textarea class="form-input" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn-primary">Enviar mensaje</button>
+        </form>
+    </section>
+    
+    <footer class="bg-[#007367] p-4 text-center mt-10">
+        <p>&copy; 2025 Movimiento Vanguardista - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Interactividad con el slider de la colección de ropa
+        function moveSlider() {
+            const slider = document.querySelector('.slider');
+            const width = slider.offsetWidth;
+            const totalItems = document.querySelectorAll('.slider-item').length;
+            const itemWidth = document.querySelector('.slider-item').offsetWidth;
+            const maxTranslate = (totalItems * itemWidth) - width;
+            
+            const currentTranslate = parseInt(window.getComputedStyle(slider).transform.split(',')[4]) || 0;
+            const newTranslate = currentTranslate - itemWidth;
+
+            if (Math.abs(newTranslate) > maxTranslate) {
+                slider.style.transform = 'translateX(0)';
+            } else {
+                slider.style.transform = `translateX(${newTranslate}px)`;
+            }
+        }
+
+        // Validación del formulario de contacto
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            const inputs = this.querySelectorAll("input, textarea");
+            let valid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value) {
+                    valid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+
+            if (!valid) {
+                event.preventDefault();
+                alert("Por favor, completa todos los campos.");
+            }
+        });
+    </script>
+</body>
+</html>

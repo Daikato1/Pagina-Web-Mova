@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #007367; /* Texto oscuro para mejor contraste */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #004d40; /* Verde para el encabezado */
+    color: #F0E3CE;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: #F0E3CE; /* Texto color crema */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #80a0d4; /* Rosa para el hover */
+}
+
+/* Títulos */
+h2 {
+    color: #000000; /* Títulos en negro */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #007367; /* Verde para botones */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #005f56; /* Cambio de color al hacer hover */
+}
+
+/* Secciones */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.section-bg-light {
+    background-color: #F8F8F8; /* Fondo gris suave para secciones */
+}
+
+.section-bg-blue {
+    background-color: #E55982; /* Azul para la sección de baloncesto */
+    color: #211E16; /* Texto oscuro para mejor contraste */
+}
+
+/* Pie de página */
+footer {
+    background-color: #004d40; /* Verde en el pie de página */
+    color: #F0E3CE; /* Texto color crema */
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 35s infinite;
+}
+
+@keyframes slide {
+    0% { opacity: 1; }
+    14.28% { opacity: 1; }
+    28.56% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.carousel-item:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.carousel-item:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.carousel-item:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.carousel-item:nth-child(5) {
+    animation-delay: 20s;
+}
+
+.carousel-item:nth-child(6) {
+    animation-delay: 25s;
+}
+
+.carousel-item:nth-child(7) {
+    animation-delay: 30s;
+}

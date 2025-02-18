@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="p-4 shadow-lg sticky-nav">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white transition duration-300 hover:text-gray-200">Movimiento Vanguardista</h1>
+            <nav>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#inicio" class="hover:text-gray-300 transition duration-300">Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-gray-300 transition duration-300">Sobre Nosotros</a></li>
+                    <li><a href="#baloncesto" class="hover:text-gray-300 transition duration-300">Equipo de Baloncesto</a></li>
+                    <li><a href="#ropa" class="hover:text-gray-300 transition duration-300">Colección de Ropa</a></li>
+                    <li><a href="#psicologia" class="hover:text-gray-300 transition duration-300">Red Psicológica</a></li>
+                    <li><a href="#contacto" class="hover:text-gray-300 transition duration-300">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Sección Inicio -->
+    <section id="inicio" class="h-screen flex items-center justify-center text-center bg-cover bg-center relative" data-aos="fade-up">
+        <!-- Carousel de imágenes -->
+        <div class="absolute inset-0 z-0">
+            <div class="carousel">
+                <div class="carousel-item" style="background-image: url('images/image1.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image2.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image3.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image4.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image5.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image6.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('images/image7.jpg');"></div>
+            </div>
+        </div>
+        <!-- Contenido de bienvenida -->
+        <div class="bg-black bg-opacity-50 p-10 rounded-lg z-10">
+            <h2 class="text-4xl font-bold text-white">Bienvenido al Movimiento Vanguardista</h2>
+            <p class="mt-4 text-lg text-white">Un espacio donde el deporte, la moda y el bienestar se unen.</p>
+            <button class="btn-primary mt-4">Descubre más</button>
+        </div>
+    </section>
+    
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="p-10 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Sobre Nosotros</h2>
+        <p class="mt-4">Información sobre el propósito y valores del movimiento.</p>
+    </section>
+    
+    <!-- Sección Equipo de Baloncesto -->
+    <section id="baloncesto" class="p-10 bg-[#80A0D4] text-center text-[#211E16]" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Equipo de Baloncesto</h2>
+        <p class="mt-4">Información sobre el equipo, partidos y logros.</p>
+    </section>
+    
+    <!-- Sección Colección de Ropa -->
+    <section id="ropa" class="p-10 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Colección de Ropa</h2>
+        <p class="mt-4">Explora nuestra colección de ropa exclusiva.</p>
+    </section>
+
+    <!-- Sección Eventos -->
+    <section id="eventos" class="p-10 bg-[#FFD700] text-center text-[#211E16]" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Eventos</h2>
+        <p class="mt-4">Mantente al tanto de nuestros próximos eventos y actividades.</p>
+    </section>
+    
+    <!-- Sección Red Psicológica -->
+    <section id="psicologia" class="p-10 bg-[#E55982] text-center text-[#F0E3CE]" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Red Psicológica</h2>
+        <p class="mt-4">Espacio de apoyo y bienestar mental.</p>
+    </section>
+    
+    <!-- Sección Contacto -->
+    <section id="contacto" class="p-10 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold">Contacto</h2>
+        <form id="contactForm" class="mt-4 max-w-lg mx-auto">
+            <input type="text" id="name" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Tu nombre" required>
+            <input type="email" id="email" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Tu correo electrónico" required>
+            <textarea id="message" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+        <div id="formFeedback" class="mt-4 text-green-500"></div>
+    </section>
+
+    <footer class="bg-[#007367] p-4 text-center mt-10">
+        <p>&copy; 2025 Movimiento Vanguardista - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
